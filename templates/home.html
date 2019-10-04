@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <p> </p>
+    {% for fruit in fruit_objects %}
+        <p> {{ fruit }} --  {{ fruit.fruit_name }} -- {{ fruit.available_month.all }} --- </p>
+        <p></p>
+        {% for season in fruit.available_month.all %}
+            <p> {{ season.inside_season }}</p>
+        
+        {% endfor %}
+        <p> ---------------- </p>
+        <p> </p>
+    {% endfor %}
+</body>
+</html>
