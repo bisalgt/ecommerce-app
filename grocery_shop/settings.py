@@ -52,10 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'grocery_shop.urls'
 
+template_path = 'templates'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, template_path)],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

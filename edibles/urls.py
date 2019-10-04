@@ -1,6 +1,7 @@
-# from django.urls import path
+from django.urls import path
 
+from edibles import views
 
-# urlpatterns = [
-#     path('', )
-# ]
+urlpatterns = [
+    path('', views.home, name='home' ),
+]
