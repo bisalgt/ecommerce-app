@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+<h3> About Page </h3>
+{% block content %}
+    {% for season in season_objects %}
+        <p>---------------------------------</p>
+        <p> {{ season }} </p>
+        <p> {{ season.month_set.all }} </p>
+        <p> {{ season.month_set.all.first}}
+        <p> {{ season.month_set.all.first.fruit_set.all }}
+        {% for fruit in season.month_set.all.first.fruit_set.all %}
+            <p>{{ fruit.fruit_name }} </p>
+        
+        {% endfor %}
+
+        <p> ----------- </p>
+    {% endfor %}
+{% endblock content %}

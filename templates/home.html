@@ -9,6 +9,7 @@
 <body>
     <h1>Home Page</h1>
     <p> </p>
+    {% block content %}
     {% for fruit in fruit_objects %}
         <p> {{ fruit }} --  {{ fruit.fruit_name }} -- {{ fruit.available_month.all }} --- </p>
         <p></p>
@@ -19,5 +20,7 @@
         <p> ---------------- </p>
         <p> </p>
     {% endfor %}
+
+    {% endblock content %}
 </body>
 </html>
