@@ -13,8 +13,9 @@
     {% for fruit in fruit_objects %}
         <p> {{ fruit }} --  {{ fruit.fruit_name }} -- {{ fruit.available_month.all }} --- </p>
         <p></p>
-        {% for season in fruit.available_month.all %}
-            <p> {{ season.inside_season }}</p>
+        {% for month in fruit.available_month.all %}
+            <p> {{ month.month_name }}</p>
+            <p> {{ month.inside_season }}</p>
         
         {% endfor %}
         <p> ---------------- </p>
