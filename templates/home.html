@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Home Page</h1>
+    <p> {{ request.user }} </p>
     <p> </p>
     {% block content %}
     {% for fruit in fruit_objects %}
